@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConversationViewController" customModule="TestMessenger" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="ConversationView" customModule="TestMessenger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dF3-el-a5V">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ymu-sU-czk"/>
+                        <outlet property="delegate" destination="-1" id="okX-3r-aaN"/>
+                    </connections>
+                </tableView>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-eA-qdH">
+                    <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message…" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSN-a1-dKd">
+                            <rect key="frame" x="8" y="7" width="320" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="tr7-0v-XS2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dF3-el-a5V" secondAttribute="bottom" id="12V-Lx-1GT"/>
+                <constraint firstAttribute="trailing" secondItem="d5f-eA-qdH" secondAttribute="trailing" id="BGQ-vg-dae"/>
+                <constraint firstItem="dF3-el-a5V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Cjj-9c-O1L"/>
+                <constraint firstItem="d5f-eA-qdH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NQU-We-Jmh"/>
+                <constraint firstAttribute="trailing" secondItem="dF3-el-a5V" secondAttribute="trailing" id="U1j-4o-BS5"/>
+                <constraint firstItem="dF3-el-a5V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y3a-Jr-yxq"/>
+                <constraint firstAttribute="bottom" secondItem="d5f-eA-qdH" secondAttribute="bottom" constant="49" id="g0X-SI-W8d"/>
+            </constraints>
+            <connections>
+                <outlet property="tableView" destination="dF3-el-a5V" id="AfS-dw-UBh"/>
+                <outlet property="textField" destination="JSN-a1-dKd" id="rRo-aZ-eUF"/>
+                <outlet property="toolBarView" destination="d5f-eA-qdH" id="wct-jM-d5L"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+</document>
